@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-i)*4w32gwflv$lzlkjn$fn1=j45(wd!b%ecuc4wy$s2i84w!gx
 #--------------------------------------------
 
 DEBUG = False
-ALLOWED_HOSTS = ['library.onrender.com']
+ALLOWED_HOSTS = ['library.onrender.com',"methodist-library-management-app.onrender.com",".onrender.com",]
 
 # Application definition
 
