@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Library
+from .models import Book_Hub
 
 from django.conf import settings
 from django.core.mail import send_mail
@@ -32,14 +32,14 @@ Email: {request.user.email}
 	except Exception as e:
 		print(f"Exception {e}")
 
-class LibraryAdmin(admin.ModelAdmin):
-    list_display = ['category', 'title', 'auther','count','request']
-    search_fields = ['category', 'title', 'auther','count']
-    list_filter = ['category', 'title', 'auther','count']
+class Book_HubAdmin(admin.ModelAdmin):
+    list_display = ['category', 'title', 'auther','count','request','edition','year','publisher']
+    search_fields = ['category', 'title', 'auther','count','edition','year','publisher']
+    list_filter = ['category', 'title', 'auther','count','edition','year','publisher']
     actions = [request_book]
 
 
-admin.site.register(Library,LibraryAdmin)
+admin.site.register(Book_Hub,Book_HubAdmin)
 admin.site.site_header = "Methodist Library Administration"
-admin.site.site_title = "Methodist Library"
+admin.site.site_title = "Methodist Library Management"
 admin.site.index_title = "Welcome to Methodist Library"
