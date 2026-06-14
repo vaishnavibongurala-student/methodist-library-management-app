@@ -1,7 +1,7 @@
 from django.db import models
 
 class Book_Hub(models.Model):
-	category = models.CharField(max_length=100)
+	department = models.CharField(max_length=100)
 	title = models.CharField(max_length=1000)
 	auther = models.CharField(max_length=100)
 	count = models.CharField(max_length=100,null=True,blank=True)
@@ -11,6 +11,36 @@ class Book_Hub(models.Model):
 	request = models.BooleanField(default=False)
 
 
+	class Meta:
+		verbose_name = "Book Hub"
+		verbose_name_plural = "Book Hubs"
+
+
 	def __str__(self):
-		return self.category
+		return self.department
+
+
+
+class Patron(models.Model):
+
+	patron = models.CharField(max_length=100)
+	title = models.CharField(max_length=1000)
+	count = models.CharField(max_length=100,null=True,blank=True)
+	department = models.CharField(max_length=100)
+	email = models.CharField(max_length=100)
+	status = models.CharField(max_length=100,default='Pending')
+	auther = models.CharField(max_length=100)
+	edition = models.CharField(max_length=100)
+	issued_date = models.DateTimeField(auto_now_add=True)
+	due_date = models.DateTimeField()
+
+
+	
+	class Meta:
+		verbose_name = "Library Patrons Assignee"
+		verbose_name_plural = "Library Patrons Assignees"
+
+
+	def __str__(self):
+		return self.patron
 
