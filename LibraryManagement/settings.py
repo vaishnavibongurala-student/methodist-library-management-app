@@ -28,7 +28,8 @@ SECRET_KEY = 'django-insecure-i)*4w32gwflv$lzlkjn$fn1=j45(wd!b%ecuc4wy$s2i84w!gx
 #--------------------------------------------
 
 DEBUG = False
-ALLOWED_HOSTS = ['library.onrender.com',"methodist-library-management-app.onrender.com",".onrender.com",]
+ALLOWED_HOSTS = ['127.0.0.1','localhost','library.onrender.com',"methodist-library-management-app.onrender.com",".onrender.com",]
+
 
 # Application definition
 
@@ -126,3 +127,13 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+EMAIL_HOST_USER = 'vaishnavibmethodist@gmail.com'
+EMAIL_HOST_PASSWORD = 'wisc wtuc bzsx kvel' #wisc wtuc bzsx kvel
