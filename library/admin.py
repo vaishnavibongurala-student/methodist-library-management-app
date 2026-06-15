@@ -42,7 +42,7 @@ Thanks & Regards,
 {request.user.username}
                         """,
                 from_email=settings.EMAIL_HOST_USER,
-                recipient_list=["srujanapadakanti62001@gmail.com"],
+                recipient_list=["methodistlibrary123@gmail.com"],
                 fail_silently=False,
             )
     except Exception as e:
